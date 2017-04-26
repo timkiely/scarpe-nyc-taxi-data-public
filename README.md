@@ -60,6 +60,8 @@ First, [Create an AWS S3 bucket](http://docs.aws.amazon.com/AmazonS3/latest/gsg/
 
 Your S3 bucket is a named varibale to be passed to the bash script. Here, I am sending the data to `s3://taxi.data.v002` so I am passing the argument `taxi.data.v002` but replace as necessary.
 <br>
+<br>
+
 `.06-send_trips_to_S3.sh taxi.data.v002`
 
 ##### 7. Export the FHV trips to csv, then send to S3
@@ -69,30 +71,32 @@ First, [Create an AWS S3 bucket](http://docs.aws.amazon.com/AmazonS3/latest/gsg/
 Your S3 bucket is a named varibale to be passed to the bash script. Here, I am sending the data to `s3://fhv.data.v001` so I am passing the argument `fhv.data.v001` but replace as necessary.
 
  <br>
+
  `./07-send_fhv_trips_to_S3.sh fhv.data.v001`
+
 
 ##### 8. Load the Yellow, Green and FHV data from S3 to Redshift
 
 The arguments you need to pass to this script are as follows:
 
-`./08-load_trips_to_redshift.sh <database password> <database hostname> <database username> <database name> -p <database port>`
+`./08-load_trips_to_redshift.sh <database password> <database hostname> <database username> <database name> <database port>`
 
 For example:
 
-`./08-load_trips_to_redshift.sh HWE1001 taxi-cluster-ds.clljv8fjklbx.us-west-2.redshift.amazonaws.com tkiely taxi 5439`
+`./08-load_trips_to_redshift.sh mypw taxi-cluster-ds.clljv8fjklbx.us-west-2.redshift.amazonaws.com myusername mydbname 5439`
 
 [See here](http://docs.aws.amazon.com/redshift/latest/mgmt/connecting-from-psql.html) for more information about connecting to Redshift from psql and how to identify Redshift endpoints, hostnames, etc.
+
 
 ##### 9. Backup the Redshift tables to S3, vacuum and analyze
 
 The arguments you need to pass to this script are as follows:
 
-`./09-final_housekeeping.sh <database password> <database hostname> <database username> <database name> -p <database port>`
+`./09-final_housekeeping.sh <database password> <database hostname> <database username> <database name> <database port>`
 
 For example:
 
-`./09-final_housekeeping.sh HWE1001 taxi-cluster-ds.clljv8fjklbx.us-west-2.redshift.amazonaws.com tkiely taxi 5439`
-
+`./09-final_housekeeping.sh mypw taxi-cluster-ds.clljv8fjklbx.us-west-2.redshift.amazonaws.com myusername mydbname 5439`
 
 
 ## Schema Info
