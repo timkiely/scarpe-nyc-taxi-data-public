@@ -1,4 +1,4 @@
-# Downloading and Scrapping NYC Taxi data, including Yellow, Green, Uber and other "For Hire Vehicle" data
+# Downloading and Scraping NYC Taxi data, including Yellow, Green, Uber and other "For Hire Vehicle" data
 
 This repository builds on the work of [Todd Schneider](http://toddwschneider.com). See the LICENSE for relevant distribution acknowledgements. 
 
