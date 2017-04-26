@@ -134,7 +134,7 @@ There's a Ruby script in the `tlc_statistics/` folder to import data from the TL
 
 ## Colophon
 
-All due credit to [Todd Schneider](https://github.com/toddwschneider/nyc-taxi-data)
+All due credit to [Todd Schneider](http://toddwschneider.com/)
 
 
 
