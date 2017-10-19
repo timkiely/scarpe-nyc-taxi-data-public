@@ -33,9 +33,13 @@ Both are also available via [Homebrew](http://brew.sh/) on Mac OS X
 
 ##### 2. Initialize database and set up schema
 
-`./00-initialize_database.sh`
+If using Ubuntu, the easiest way to move forward is to create a postgres superuser called `ubuntu`. This will give your system user write access to create a database. run `sudo -u postgres createuser --interactive` and mark `yes` when asked if the user is superuser. 
 
-You may need to alter permissions with `chmod 700 -R /home/ubuntu/nyc-taxi-data` to get this to run with no errors. If this script runs with any errors, delete the database entirely with `dropdb nyc-taxi-data` and then run from scratch (otherwise, you'll be re-indexing and wasting disk space).
+You may need to alter permissions with `chmod 700 -R /home/ubuntu/scrape-taxi-data` to get this to run with no errors. If this script runs with any errors, delete the database entirely with `dropdb nyc-taxi-data` and then run from scratch (otherwise, you'll be re-indexing and wasting disk space).
+
+Then, run:
+
+`./00-initialize_database.sh`
 
 ##### 3. Download raw taxi data 
 
