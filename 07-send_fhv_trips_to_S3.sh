@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "`date` creating fhv trips csv"
-psql nyc-taxi-data -c "copy (select * from fhv_trips) to '/home/ubuntu/nyc-taxi-data/fhv_trips.csv' delimiter '|'";
+psql nyc-taxi-data -c "copy (select * from fhv_trips) to '/home/ubuntu/scrape-taxi-data/fhv_trips.csv' delimiter '|'";
 echo "`date` fhv trips csv done"
 
 echo "`date` starting zip job"
