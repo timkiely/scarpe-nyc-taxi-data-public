@@ -56,7 +56,7 @@ CREATE TABLE nyc_taxi_data_v002 AS
 SELECT 
     id 
     ,cab_type_id
-    ,vendor_id character,
+    ,vendor_id
     ,pickup_datetime
     ,to_char(pickup_datetime, 'YYYY-MM-DD') as PICKUP_DATE
     ,to_char(pickup_datetime, 'YYYY') as PICKUP_YEAR
