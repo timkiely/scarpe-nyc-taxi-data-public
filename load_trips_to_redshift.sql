@@ -54,10 +54,10 @@ DROP TABLE IF EXISTS nyc_taxi_data_v002;
 CREATE TABLE nyc_taxi_data_v002 AS 
 (
 SELECT 
-    id integer NOT NULL
-    ,cab_type_id integer
-    ,vendor_id character varying,
-    ,pickup_datetime TIMESTAMP
+    id 
+    ,cab_type_id
+    ,vendor_id character,
+    ,pickup_datetime
     ,to_char(pickup_datetime, 'YYYY-MM-DD') as PICKUP_DATE
     ,to_char(pickup_datetime, 'YYYY') as PICKUP_YEAR
     ,to_char(pickup_datetime, 'Q') as PICKUP_QUARTER
@@ -72,7 +72,7 @@ SELECT
     ,to_char(pickup_datetime, 'SS') as PICKUP_SEC
 
     
-    ,dropoff_datetime TIMESTAMP
+    ,dropoff_datetime
     ,to_char(dropoff_datetime, 'YYYY-MM-DD') as DROPOFF_DATE
     ,to_char(dropoff_datetime, 'YYYY') as DROPOFF_YEAR
     ,to_char(dropoff_datetime, 'Q') as DROPOFF_QUARTER
@@ -86,30 +86,30 @@ SELECT
     ,to_char(dropoff_datetime, 'MI') as DROPOFF_MIN
     ,to_char(dropoff_datetime, 'SS') as DROPOFF_SEC
     
-    ,store_and_fwd_flag character(1)
-    ,rate_code_id integer
-    ,pickup_longitude FLOAT
-    ,pickup_latitude FLOAT
-    ,dropoff_longitude FLOAT
-    ,dropoff_latitude FLOAT
-    ,passenger_count integer
-    ,trip_distance numeric
-    ,fare_amount numeric
-    ,extra numeric
-    ,mta_tax numeric
-    ,tip_amount numeric
-    ,tolls_amount numeric
-    ,ehail_fee numeric
-    ,improvement_surcharge numeric
-    ,total_amount numeric
-    ,payment_type character varying
-    ,trip_type integer
-    ,pickup_nyct2010_gid integer
-    ,dropoff_nyct2010_gid integer
-    ,pickup_location_id integer
-    ,dropoff_location_id integer
-    ,pickup VARCHAR(max)
-    ,dropoff VARCHAR(max)
+    ,store_and_fwd_flag
+    ,rate_code_id
+    ,pickup_longitude
+    ,pickup_latitude
+    ,dropoff_longitude
+    ,dropoff_latitude
+    ,passenger_count
+    ,trip_distance
+    ,fare_amount
+    ,extra
+    ,mta_tax
+    ,tip_amount
+    ,tolls_amount
+    ,ehail_fee
+    ,improvement_surcharge
+    ,total_amount
+    ,payment_type
+    ,trip_type
+    ,pickup_nyct2010_gid
+    ,dropoff_nyct2010_gid
+    ,pickup_location_id
+    ,dropoff_location_id
+    ,pickup
+    ,dropoff
 FROM nyc_taxi_data_v002_old);
 
 -- LOAD FHV TAXI TRIPS:
