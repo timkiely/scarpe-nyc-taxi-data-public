@@ -2,7 +2,7 @@
 
 This repository builds on the work of [Todd Schneider](http://toddwschneider.com). See the LICENSE for relevant distribution acknowledgements. 
 
-These scripts download, process, and makes available over 1.3 billion taxi and Uber trips originating in New York City. The data is processed in a [PostgreSQL](http://www.postgresql.org/) database, and uses [PostGIS](http://postgis.net/) for spatial calculations, in particular mapping latitude/longitude coordinates to census tracts. The data is then uploaded to both [AWS Redshift](https://aws.amazon.com/redshift/) and [AWS RDS for Postgres](https://aws.amazon.com/rds/postgresql/) via [AWS S3](https://aws.amazon.com/s3/).
+These scripts download, process, and makes available over 1.3 billion taxi and Uber trips originating in New York City. The data is processed in a [PostgreSQL](http://www.postgresql.org/) database, and uses [PostGIS](http://postgis.net/) for spatial calculations, in particular mapping latitude/longitude coordinates to census tracts. The data is then uploaded to [AWS Redshift](https://aws.amazon.com/redshift/).
 
 The [TLC data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) comes from the NYC Taxi & Limousine Commission.
 
@@ -66,7 +66,7 @@ Your S3 bucket is a named varibale to be passed to the bash script. Here, I am s
 <br>
 <br>
 
-`.06-send_trips_to_S3.sh taxi.data.v002`
+`./06-send_trips_to_S3.sh taxi.data.v002`
 
 ##### 7. Export the FHV trips to csv, then send to S3
  
