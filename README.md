@@ -43,6 +43,8 @@ Then, run:
 
 ##### 3. Download raw taxi data 
 
+IMPORTANT: the URLs for the actual taxi data are located in `raw_data_urls.txt`. To refresh the data (add the most recent months) add the relevant URLs to this file. Note that the TLC frequently changes the data schemas of the files it provides, so be warned that downloading additional data may break the script.
+
 `./01-download_raw_data.sh`
 
 ##### 4. Import taxi data into database and map to census tracts
@@ -50,6 +52,8 @@ Then, run:
 `./02-import_trip_data.sh`
 
 ##### 5. Download and import for-hire vehicle records, including sample Uber data from FiveThirtyEight
+
+Raw URLs for uber data located here: `raw_uber_data_urls.txt`. See the note above under `3. Download raw taxi data` for warnings about adding new URLs.
 
 `./03-download_raw_uber_data.sh`
 <br>
