@@ -36,7 +36,7 @@ CREATE TABLE nyc_taxi_data_v002 (
 
 
 copy nyc_taxi_data_v002 from 's3://taxi.data.v002/trips.csv.gz'
-credentials 'aws_access_key_id=AKIAIRSVNG47S53REZNQ;aws_secret_access_key=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'
+credentials #
 GZIP
 delimiter '|'
 acceptinvchars
@@ -135,7 +135,7 @@ CREATE TABLE nyc_fhv_data_v002 (
 
 
 copy nyc_fhv_data_v002 from 's3://fhv.data.v001/fhv_trips.csv.gz'
-credentials 'aws_access_key_id=AKIAIRSVNG47S53REZNQ;aws_secret_access_key=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'
+credentials #
 GZIP
 delimiter '|'
 acceptinvchars
